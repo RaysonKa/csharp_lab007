@@ -20,11 +20,11 @@ namespace lab007
         
         private void button1_Click(object sender, EventArgs e)
         {
-            double xmin = double.Parse(textBox1.Text);
-            double xmax = double.Parse(textBox2.Text);
-            double step = double.Parse(textBox3.Text);
+            double xmin = double.Parse(textBox1.Text);//-0,73
+            double xmax = double.Parse(textBox2.Text);//-1,73
+            double step = double.Parse(textBox3.Text);//-0,1
             
-            int count = (int)Math.Ceiling((xmax - xmin) / step) + 1;
+            int count = (int)Math.Ceiling(Math.Abs((xmax - xmin) / step) + 1);
             double[] x = new double[count];
             double[] y = new double[count];
             
